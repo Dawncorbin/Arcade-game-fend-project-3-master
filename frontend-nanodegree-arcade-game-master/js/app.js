@@ -3,8 +3,9 @@ var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
-    // x pos
-    // y pos
+    this.x = 0;
+    this.y = 0;
+
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
@@ -46,18 +47,12 @@ class Hero {
         this.y = this.startY;
     }
 
-  //const player = new Hero();
-
-    // draw hero sprite on current x and y coord position
+    // renders player image on board
     render() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 
-    /**
-     * update hero's x and y property according to input
-     *
-     * @param {string} input - direction to travel
-     */
+    // moves player with arrow keys
     handleInput(input) {
         switch(input) {
             case 'left':
@@ -83,6 +78,13 @@ class Hero {
         }
     }
 }
+
+  // variable for player
+  const player = new Hero();
+  const bug1 = new Enemy();
+  const allEnemies = [];
+  allEnemies.push(bug1);
+
 
     // init allEnemies array
     // for each enemy - create and push new Enemy object into above array
