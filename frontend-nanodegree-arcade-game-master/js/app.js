@@ -10,6 +10,7 @@ var Enemy = function() {
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/enemy-bug.png';
+    this.step = 101;
 };
 
 // Update the enemy's position, required method for game
@@ -20,8 +21,11 @@ Enemy.prototype.update = function(dt) {
     // all computers.
 
     //If enemy is not passed boundary
+    if(this.x < this.step * 4) {
         // move forward
         // increment x by speed * dt
+        this.x += 20 * dt;
+      }
     // else
         // reset pos to start
 };
