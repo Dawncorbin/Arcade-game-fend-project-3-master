@@ -1,3 +1,29 @@
+# Arcade Game Project by Dawn
+
+Arcade Game Project - Udacity project developed using HTML, CSS and JavaScript
+
+## Instructions
+
+How to play:
+* Use the arrow keys to control your character
+
+* Guide the character into the water to win
+
+* Watch out for the crossing bugs! If a bug collides with you, you will return to 'start'
+
+## Information
+
+This project makes use of Udacity's classic arcade game starter code https://github.com/udacity/frontend-nanodegree-arcade-game
+
+## How to run the game on your computer
+
+* Click 'Clone or download' button and click 'Download Zip' to download the project to your computer
+
+* Open the folder, click 'index.html' to run the game
+
+Acknowledgments: Udacity provided the starter code. Mike Wales & Jonathon N webinar. Matthew Cranford's walkthroughs. Fellow FEND students on Slack. W3Schools and Mozilla websites.
+
+* Initial information from the README file:
 frontend-nanodegree-arcade-game
 ===============================
 
