@@ -23,7 +23,6 @@ var Engine = (function(global) {
         canvas = doc.createElement('canvas'),
         ctx = canvas.getContext('2d'),
         lastTime;
-        id;
 
     canvas.width = 505;
     canvas.height = 606;
@@ -33,22 +32,7 @@ var Engine = (function(global) {
      * and handles properly calling the update and render methods.
      */
     function main() {
-        if(player.victory === true) {
-            win.cancelAnimationFrame(id);
-            toggleModal();
-        } else {
-            id = win.requestAnimationFrame(main);
-        }
 
-        function toggleModal() {
-            const modal = document.querySelector('.modal');
-            modal.style.display = 'inline';
-        };
-
-        document.querySelector('.replayButton').addEventListener('click', () => {
-            location.reload(false);
-            main();
-        })
         /* Get our time delta information which is required if your game
          * requires smooth animation. Because everyone's computer processes
          * instructions at different speeds we need a constant value that
@@ -72,7 +56,8 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
-
+        win.requestAnimationFrame(main);
+         }
 
     /* This function does some initial setup that should only occur once,
      * particularly setting the lastTime variable that is required for the
